@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-M 1</title>
+    <style>
+        *{
+            margin:0;
+        }
+        div{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ccc;
+        }
+        button{
+            padding: 10px;
+            border:none;
+            background: red;
+            color: #fff;
+            border-radius: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            width: 130px;
+        }
+        button.saved{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button>Save</button>
+    </div>
+    
+  <script>
+    let btn = document.querySelector('button');
+    
+
+        function textChange(){
+            if (btn.innerHTML == 'Save'){
+                btn.innerHTML = 'Saved';
+                btn.classList.add('saved');
+            } else{
+                btn.innerHTML = 'Save';
+                btn.classList.remove('saved');
+            }
+        }
+
+        btn.addEventListener('click', textChange);
+
+  </script>
+</body>
+</html>
+

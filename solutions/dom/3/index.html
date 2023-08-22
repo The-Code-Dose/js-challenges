@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-M 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+        }
+        ::selection{
+            background: transparent;
+        }
+        .wrap {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            background: #ccc;
+        }
+
+        .input {
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        .copy {
+            cursor: pointer;
+            position: relative;
+            padding: 8px;
+            background: #eee;
+            border-radius: 0 13px 13px 0;
+
+            >i {
+                font-size: 18px;
+            }
+        }
+
+        .success {
+            position: absolute;
+            top: -25px;
+            left: -11px;
+            opacity: 0;
+            transition: 0.3s ease-in;
+        }
+        .copied.success{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <textarea name="" rows="1" data-gramm="false" class="input"></textarea>
+        <div class="copy">
+            <span class="success">Copied</span>
+            <i class="fa-regular fa-copy"></i>
+        </div>
+    </div>
+
+    <script>
+        let textarea = document.querySelector('.input');
+        let copybtn = document.querySelector('.copy').addEventListener('click', copyText);
+
+        function copyText() {
+            textarea.select();
+            document.execCommand('copy');
+            
+            let span = document.querySelector('.success');
+            span.classList.add('copied');
+
+            window.addEventListener('mouseover', () => {
+                span.classList.remove('copied');
+            })
+        }
+        
+    </script>
+</body>
+
+</html>

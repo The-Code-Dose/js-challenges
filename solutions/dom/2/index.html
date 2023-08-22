@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-M 2</title>
+    <style>
+        *{
+            margin:0;
+        }
+        .wrap{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px ;
+            background: #ccc;
+        }
+        .click-btn{
+            display: block;
+            border: 2px solid #000;
+            border-radius: 7px;
+            padding: 15px;
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .click-btn:hover{
+            background: #000;
+            color: #fff;
+        }
+        .dropdown{
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: grid;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: height 0.3s linear;
+        }
+        button{
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            font: 600 20px black;
+            border-radius: 5px;
+            transform: translateY(-350%);
+            transition: transform 0.1s linear;
+            transition-delay: 0.5;
+        }
+        button:hover{
+            background: #eee;
+        }
+        .dropdown.showdropdown{
+            height: auto;
+            opacity: 1;
+        }
+        .showdropdown button{
+           transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div><a class="click-btn" href="#">Menu</a></div>
+        <div class="dropdown">
+            <button>Downlord</button>
+            <button>Hide Pin</button>
+            <button>Report Pin</button>
+        </div>
+    </div>
+    
+  <script>
+   let clickBtn = document.querySelector('.click-btn');
+   let dropdown = document.querySelector('.dropdown');
+
+       clickBtn = thedropdown();
+
+       function thedropdown(){
+        clickBtn.addEventListener('click', () =>{
+          dropdown.classList.toggle('showdropdown');
+        })
+        
+       }
+
+  </script>
+</body>
+</html>
