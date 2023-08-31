@@ -21,7 +21,6 @@ updatedPrice.forEach((fruit) =>
   console.log(`${fruit.name} : $ ${fruit.price}`),
 );
 
-const orderPrice = updatedPrice.reduce((acc, curr) => {
-  return acc + curr.price;
-}, 0);
+const orderPrice = updatedPrice.reduce((acc, curr) => acc + curr.price);
+
 console.log("Total updated Price: " + orderPrice);
