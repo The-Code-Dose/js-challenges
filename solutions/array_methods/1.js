@@ -2,14 +2,10 @@ let numbers = [15, 25, 35, 45, 55, 65];
 
 let sumUsingForEach = 0;
 
-numbers.forEach(num => {
-    sumUsingForEach += num;
-});
+numbers.forEach(num => sumUsingForEach += num);
 
 console.log(sumUsingForEach)
 
-let sumUsingReduce = numbers.reduce((acc, curr) => {
-    return acc + curr;
-}, 0);
+const sumUsingReduce = numbers.reduce((acc, curr) => acc + curr);
 
 console.log(sumUsingReduce);
