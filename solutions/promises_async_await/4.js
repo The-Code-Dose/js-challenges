@@ -14,7 +14,6 @@ const thirdPromise = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-Promise.all([firstPromise, secondPromise, thirdPromise])
-    .then((res) =>
-        console.log(res),
-    );
+Promise.all([firstPromise, secondPromise, thirdPromise]).then((res) =>
+  console.log(res),
+);
