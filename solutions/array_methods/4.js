@@ -11,15 +11,17 @@ const fruits = [
   { name: "Blueberry", color: "Blue", price: 2.8 },
 ];
 
-const availableFruits = fruits.filter(fruit => fruit.price !== null);
+const availableFruits = fruits.filter((fruit) => fruit.price !== null);
 
-const updatedPrice = availableFruits.map(fruit => {
-  return {...fruit, price : fruit.price * 2};
+const updatedPrice = availableFruits.map((fruit) => {
+  return { ...fruit, price: fruit.price * 2 };
 });
 
-updatedPrice.forEach(fruit => console.log(`${fruit.name} : $ ${fruit.price}`));
+updatedPrice.forEach((fruit) =>
+  console.log(`${fruit.name} : $ ${fruit.price}`),
+);
 
 const orderPrice = updatedPrice.reduce((acc, curr) => {
   return acc + curr.price;
-}, 0)
-console.log("Total updated Price: " + orderPrice)
+}, 0);
+console.log("Total updated Price: " + orderPrice);
