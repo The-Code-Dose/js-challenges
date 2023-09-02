@@ -11,6 +11,9 @@ const ingredients = [
   { name: "Sausage", quantity: 5, price: 2.5 },
 ];
 
-let TotalCost = ingredients.reduce((acc, curr) => acc + curr.price);
+const TotalCost = ingredients.reduce(
+  (acc, { quantity, price }) => acc + quantity * price,
+  0,
+);
 
-console.log(TotalCost)
+console.log(TotalCost);
