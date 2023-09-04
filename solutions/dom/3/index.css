@@ -1,0 +1,65 @@
+.input-container {
+    display: flex; /* Use flexbox to arrange elements horizontally */
+    align-items: center; /* Vertically center elements */
+    border: 1px solid #ccc; /* Optional: Add a border for the container */
+    padding: 5px; /* Optional: Add padding for spacing */
+    width: 300px; /* Optional: Set a specific width for the container */
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10%;
+    
+}
+
+/* Style for the input */
+.input-with-icon {
+    flex: 1; /* Allow the input to expand and take available space */
+    padding-right: 30px; /* Adjust the padding to accommodate the icon and span */
+    border: none; /* Remove the input border */
+}
+
+/* Style for the icon (adjust the dimensions as needed) */
+.custom-span{
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-span-newclass{
+
+    border: 1px solid green;
+
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-text-new{
+    visibility:visible;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when button is clicked */
