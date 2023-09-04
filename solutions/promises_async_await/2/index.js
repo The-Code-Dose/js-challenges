@@ -25,4 +25,4 @@ async function function2 (){
 }
 
 //function1();
-function2();
+//function2();
