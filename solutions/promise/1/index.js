@@ -22,6 +22,28 @@ const function2 = ()=>{
 }
 
 
-//make a call here
-//function1();
-//function2();
+function1();
+function2();
+
+// const check = ()=>{
+//     const data =  {
+//     taxi:
+//     "a car licensed to transport passengers in return for payment of a fare",
+//     food: {
+//         sushi:
+//         "a traditional Japanese dish of prepared rice accompanied by seafood and vegetables",
+//         apple: {
+//         Honeycrisp:
+//             "an apple cultivar developed at the MAES Horticultural Research Center",
+//         Fuji:
+//             "an apple cultivar developed by growers at Tohoku Research Station"
+//         }//apple
+//   }//food
+// }//data
+
+// console.log(Object.entries(data));
+
+
+// }//method
+
+// check();
