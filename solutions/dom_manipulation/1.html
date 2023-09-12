@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question no. 1 of DOM</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+            border-radius: 30px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+        .change{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="changeLayout()">Save</button>
+
+    <script>
+        function changeLayout(){
+            const btn = document.querySelector('.btn');
+            
+            btn.classList.toggle('change');
+
+            if(btn.innerHTML == 'Save'){
+                btn.innerHTML = 'Saved';
+            }
+            else{
+                btn.innerHTML = 'Save';
+            }
+        }
+    </script>
+</body>
+</html>
