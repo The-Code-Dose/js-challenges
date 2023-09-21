@@ -1,12 +1,10 @@
 const doubledPromise = (number) => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (typeof number === "number") {
-        resolve(number * 2);
-      } else {
-        reject(new Error("Input is not a number"));
-      }
-    }, 1000);
+    if (typeof number === "number") {
+      resolve(number * 2);
+    } else {
+      reject(new Error("Input is not a number"));
+    }
   });
 };
 
