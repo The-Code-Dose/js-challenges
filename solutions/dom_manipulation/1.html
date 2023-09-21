@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button {
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 20px;
+            border-radius: 40px;
+            font-size: 20px;
+            font-family: "Helvetica Neue",Arial,sans-serif;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .saved {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" class="button" id="myBtn">Save</button>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", function() {
+            if (this.classList.contains("saved")) {
+                this.innerHTML = "Save";
+            } else {
+                this.innerHTML = "Saved";
+            }
+            this.classList.toggle("saved");
+        });
+    </script>
+</body>
+</html>
