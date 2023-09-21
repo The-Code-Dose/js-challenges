@@ -15,3 +15,4 @@ If you want to submit a solution for any challenge, please follow the below guid
 - While submitting a pull request, please add screenshots of your results.
 - Please do not submit solutions if they already exist.
 - **Create one Pull Request for each solution.**
+- Please lint and prettify your code using `pnpm run format` or `npm run format` before submitting.
