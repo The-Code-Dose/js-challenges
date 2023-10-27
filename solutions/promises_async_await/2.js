@@ -6,11 +6,11 @@ const fetchUsingThen = () => {
     .then((res) => console.log(res.value));
 };
 
-const fetchUsingAsynAwait = async () => {
+const fetchUsingAsyncAwait = async () => {
   const res = await fetch(URL);
   const data = await res.json();
   console.log(data.value);
 };
 
 fetchUsingThen();
-fetchUsingAsynAwait();
+fetchUsingAsyncAwait();
