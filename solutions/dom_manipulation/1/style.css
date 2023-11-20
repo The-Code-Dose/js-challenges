@@ -1,0 +1,9 @@
+#btn_save{
+    cursor: pointer;
+    background-color: #f03e3e;
+    color: #fff;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 24px;
+}
