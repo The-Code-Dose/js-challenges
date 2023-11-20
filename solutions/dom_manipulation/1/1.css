@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 7rem;
+    height: 3rem;
+    color: #fff;
+    background-color: red;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
